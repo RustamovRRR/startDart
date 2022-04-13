@@ -10,4 +10,11 @@ void main(List<String> args) {
   for (var name in names) {
     print(name);
   }
+
+  // while loop
+  int counter = 0;
+  while (counter < 3) {
+    print("counter: $counter");
+    counter++;
+  }
 }
