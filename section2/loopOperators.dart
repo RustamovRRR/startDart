@@ -24,4 +24,29 @@ void main(List<String> args) {
     print("count = $count");
     count++;
   } while (count < 10);
+
+  // break
+  for (var i = 0; i < 5; i++) {
+    if (i == 3) {
+      break;
+    }
+    print(i);
+  }
+  // continue
+  for (var i = 0; i < 5; i++) {
+    if (i == 3) {
+      continue;
+    }
+    print(i);
+  }
+  // label
+  outsideLoop:
+  for (var i = 1; i < 5; i++) {
+    for (var j = 1; j < 5; j++) {
+      if (i == 3) {
+        continue outsideLoop;
+      }
+      print("$i * $j = ${i * j}");
+    }
+  }
 }
