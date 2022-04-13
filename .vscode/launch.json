@@ -8,7 +8,7 @@
       "name": "Dart & Flutter",
       "request": "launch",
       "type": "dart",
-      "program": "lesson1/exercise.dart"
+      "program": "section2/if_else.dart"
     }
   ]
 }
