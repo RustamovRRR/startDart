@@ -5,4 +5,13 @@ void main(List<String> args) {
 
   something = num1>num2? num1:num2;
   print(something);
+
+  String? name = null;
+  String? surname = "Rustamov";
+  String? message;
+
+  message = name ?? surname;
+  print(message);
+
+  
 }
