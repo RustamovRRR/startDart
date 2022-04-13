@@ -17,4 +17,11 @@ void main(List<String> args) {
     print("counter: $counter");
     counter++;
   }
+
+  // do while loop
+  int count = 0;
+  do {
+    print("count = $count");
+    count++;
+  } while (count < 10);
 }
