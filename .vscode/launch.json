@@ -8,7 +8,7 @@
       "name": "Dart & Flutter",
       "request": "launch",
       "type": "dart",
-      "program": "section2/loopOperators.dart"
+      "program": "${file}"
     }
   ]
 }
