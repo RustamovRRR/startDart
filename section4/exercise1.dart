@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main(List<String> args) {
   // exercise 1
   List<String> cities = [];
@@ -38,4 +40,18 @@ void main(List<String> args) {
     }
     print("------");
   }
+  // exercise 4
+  List<int> coxluq1 = List.filled(5, 1);
+  List<int> coxluq2 = List.filled(5, 0);
+  for (var i = 0; i < 5; i++) {
+    coxluq1[i] = Random().nextInt(50);
+    coxluq2[i] = Random().nextInt(50);
+  }
+  List<int> massiv = [...coxluq1, ...coxluq2];
+  print(massiv);
+  Set<int> sonSet = {};
+  for (var item in massiv) {
+    sonSet.add(item * item);
+  }
+  print(sonSet);
 }
