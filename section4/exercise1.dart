@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 void main(List<String> args) {
@@ -54,4 +55,26 @@ void main(List<String> args) {
     sonSet.add(item * item);
   }
   print(sonSet);
+  // exercise 5
+  int inputNumb = 0;
+  List<int> musbetList = <int>[];
+  double average = 0;
+  do {
+    print("eded daxil edin");
+    inputNumb = int.parse(stdin.readLineSync()!);
+    if (inputNumb > 0) {
+      musbetList.add(inputNumb);
+    }
+  } while (inputNumb != -1);
+
+  average = ortalamaniTap(musbetList);
+  print(average);
+}
+
+double ortalamaniTap(List<int> liste) {
+  int ortalama = 0;
+  for (var i = 0; i < liste.length; i++) {
+    ortalama += liste[i];
+  }
+  return ortalama / liste.length;
 }
