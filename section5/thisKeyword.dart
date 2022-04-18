@@ -9,10 +9,18 @@ void main(List<String> args) {
   var mercedes = Car(2020, "Mercedes", true);
   mercedes.carInformation();
   mercedes.yasHesabla();
+
+  Car ford = Car.modelsizConstructor(2019, true);
+  ford.carInformation();
+  ford.yasHesabla();
+
+  Car fiat = Car.ilizConstructor("fiat", true);
+  fiat.carInformation();
+  fiat.yasHesabla();
 }
 
 class Car {
-  int year = 2020;
+  int? year;
   String? model;
   bool? isAutomatic;
   void carInformation() {
@@ -31,6 +39,11 @@ class Car {
   Car(this.year, this.model, this.isAutomatic) {
     print("Constructor method");
   }
+  Car.modelsizConstructor(this.year, this.isAutomatic);
+  Car.ilizConstructor(String model, bool isAutomatic) {
+    this.model = model;
+    this.isAutomatic = isAutomatic;
+  }
   // Car(int year, String model, bool isAutomatic) {
   //   this.year = year;
   //   this.model = model;
@@ -38,6 +51,10 @@ class Car {
   //   print("Constructor method");
   // }
   void yasHesabla() {
-    print("Mashinin yashi ${2021 - year}");
+    if (year != null) {
+      print("Mashinin yashi ${2021 - year!}");
+    } else {
+      print("Mashinin ili bilinmir");
+    }
   }
 }
