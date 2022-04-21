@@ -1,3 +1,4 @@
+import 'customer.dart';
 import 'database.dart';
 
 void main(List<String> args) {
@@ -7,4 +8,7 @@ void main(List<String> args) {
     print("Device connected");
   } else
     print("Wrong password or name");
+
+  Customer muster = Customer(123);
+  print(muster.result);
 }
