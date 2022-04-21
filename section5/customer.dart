@@ -1,10 +1,10 @@
 class Customer {
   int? _customerNo;
   Customer(int no) {
-    customerNoChecker = no;
+    _customerNoChecker = no;
   }
 
-  void set customerNoChecker(int no) {
+  void set _customerNoChecker(int no) {
     if (no > 0) {
       this._customerNo = no;
     } else
