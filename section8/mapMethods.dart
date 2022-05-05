@@ -1,7 +1,7 @@
 void main(List<String> args) {
   var map = <String, dynamic>{};
   map['ad'] = "John";
-  map["Yas"] = 23;
+  map["yas"] = 23;
   // print(map);
   var map2 = Map.from(map);
   // print(map2);
@@ -13,5 +13,14 @@ void main(List<String> args) {
         return "Element $element";
       },
       value: (element) => "${element * element}");
-  print(map4);
+  // print(map4);
+
+  map.update(
+    "id",
+    (value) => value - 3,
+    ifAbsent: () => 1,
+  );
+  // print(map);
+  map.putIfAbsent("boy", () => 177);
+  print(map);
 }
